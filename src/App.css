@@ -1,0 +1,197 @@
+.App{
+    background: linear-gradient(45deg, rgb(26, 26, 107), rgb(62, 1, 62));
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.Stage{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Earned{
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.top{
+    height: 50%;
+    width: 100%;
+    position: relative;
+}
+
+.timer{
+    font-size: 40px;
+    font-weight: 400;
+    width: 120px;
+    height: 120px;
+    border: 2px solid orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 40px;
+    left: 30px; 
+}
+
+.bottom{
+    height: 50%;
+}
+
+.quiz{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question{
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    border: 1px solid orange;
+    border-radius: 6px;
+    width: 80%;
+    padding: 12px;
+    margin: 40px auto 40px;;
+}
+
+.answer-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0 10px 20px 10px;
+}
+
+.option{
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    border: 1px solid orange;
+    width: 40%;
+    margin: 0px 10px 10px 10px;
+    border-radius: 6px;
+    margin: 0px  10px  20px;
+    padding: 8px; 
+    cursor: pointer;
+}
+
+.option:hover, .option.active{
+    background-color: blue;
+}
+
+
+
+.option.correct{
+    animation: correct 3s ease forwards;
+}
+
+@keyframes correct{
+    0%, 22%, 42%{
+        background-color: darkslateblue;
+    }
+
+    20%, 40%, 60%{
+        background-color: blueviolet;
+    }
+
+    62%, 100%{
+        background-color: green;
+    }
+}
+
+.option.wrong{
+    animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong{
+    0%, 22%, 42%{
+        background-color: darkslateblue;
+    }
+
+    20%, 40%, 60%{
+        background-color: blueviolet;
+    }
+
+    62%, 100%{
+        background-color: crimson;
+    }
+}
+
+.MoneyPyramid{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid black;
+}
+
+.moneyList{
+    list-style: none;    
+    width: 100%;
+    padding: 5px;
+    display: block;
+}
+
+.moneyListItm{
+    padding: 10px 5px 10px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.moneyListItm.active{
+    background-color: aqua;
+}
+
+.moneyListNum{
+    font-size: 16px;
+    font-weight: 100;
+    width: 20%;
+}
+
+.moneyListAmt{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.startPage{
+    position: relative;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.startInput{
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    text-align: center;
+    color:rgb(26, 26, 107);
+    font-weight: 600;
+}
+
+.startBtn{
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: rgb(12, 100, 17);
+    font-weight: 600;
+}
